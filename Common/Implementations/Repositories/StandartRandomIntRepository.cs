@@ -1,9 +1,9 @@
-﻿using StrategyPattern.Repositories.Interfaces;
-using StrategyPattern.Validators;
+﻿using Common.Implementations.Validators;
+using Common.Interfaces.Repositories;
 using System;
 using System.Collections.Generic;
 
-namespace StrategyPattern.Repositories.RandomIntRepositories
+namespace Common.Implementations.Repositories
 {
     public class StandartRandomIntRepository : IRandomIntRepository
     {

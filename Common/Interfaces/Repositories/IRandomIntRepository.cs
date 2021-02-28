@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace StrategyPattern.Repositories.Interfaces
+namespace Common.Interfaces.Repositories
 {
     public interface IRandomIntRepository
     {

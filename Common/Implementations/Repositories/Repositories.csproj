@@ -4,17 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A778C971-1747-4546-BBF4-54580A84041E}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>StrategyPattern</RootNamespace>
-    <AssemblyName>StrategyPattern</AssemblyName>
+    <ProjectGuid>{2DF45D58-9FFA-4251-B151-0449D390538D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Common.Implementations.Repositories</RootNamespace>
+    <AssemblyName>Common.Implementations.Repositories</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,29 +41,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Contexts\NumbersContext.cs" />
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Strategies\Interfaces\INumbersStrategy.cs" />
-    <Compile Include="Strategies\NumbersStrategies\AddNumbersStrategy.cs" />
-    <Compile Include="Strategies\NumbersStrategies\FormuleNumbersStrategy.cs" />
-    <Compile Include="Strategies\NumbersStrategies\MultiplyNumbersStrategy.cs" />
+    <Compile Include="StandartRandomIntRepository.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Common\Container\Container.csproj">
-      <Project>{8ed44542-e24e-4f1b-94ef-b66de81da2e3}</Project>
-      <Name>Container</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Common\Implementations\Validators\Validators.csproj">
-      <Project>{035e94fe-8dbc-4ed9-bbc0-36680a576159}</Project>
-      <Name>Validators</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Common\Interfaces\Interfaces.csproj">
+    <ProjectReference Include="..\..\Interfaces\Interfaces.csproj">
       <Project>{2e15b50b-45cc-4f4f-a0ab-e3d08dd5c71f}</Project>
       <Name>Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Validators\Validators.csproj">
+      <Project>{035e94fe-8dbc-4ed9-bbc0-36680a576159}</Project>
+      <Name>Validators</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

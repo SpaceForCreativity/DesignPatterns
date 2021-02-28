@@ -1,8 +1,9 @@
-﻿using System;
+﻿using Common.Interfaces.Validators;
+using System;
 
-namespace StrategyPattern.Validators
+namespace Common.Implementations.Validators
 {
-    public class MinMaxValidator
+    public class MinMaxValidator : IMinMaxValidator
     {
         private string _errorFormat = "{0} cannot be less then {1}.";
         private const string _defaultMinAlias = "Min";
@@ -12,10 +13,10 @@ namespace StrategyPattern.Validators
         public void Validate(int min, int max, string minAlias = null, string maxAlias = null)
         {
             var errorMessage = string.Format(_errorFormat,
-                                             minAlias ?? _defaultMinAlias, 
+                                             minAlias ?? _defaultMinAlias,
                                              maxAlias ?? _defaultMaxAlias);
 
-            if(min > max)
+            if (min > max)
                 throw new ArgumentException(errorMessage);
         }
     }

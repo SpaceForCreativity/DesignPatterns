@@ -1,8 +1,8 @@
-﻿using StrategySample.Strategies.Interfaces;
+﻿using StrategyPattern.Strategies.Interfaces;
 using System;
 using System.Linq;
 
-namespace StrategySample.Strategies.NumbersStrategies
+namespace StrategyPattern.Strategies.NumbersStrategies
 {
     public class FormuleNumbersStrategy : INumbersStrategy
     {

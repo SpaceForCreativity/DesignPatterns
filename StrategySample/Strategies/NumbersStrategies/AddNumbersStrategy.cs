@@ -1,7 +1,7 @@
-﻿using StrategySample.Strategies.Interfaces;
+﻿using StrategyPattern.Strategies.Interfaces;
 using System.Linq;
 
-namespace StrategySample.Strategies.NumbersStrategies
+namespace StrategyPattern.Strategies.NumbersStrategies
 {
     public class AddNumbersStrategy : INumbersStrategy
     {

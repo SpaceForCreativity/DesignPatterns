@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace StrategySample.Validators
+namespace StrategyPattern.Validators
 {
     public class MinMaxValidator
     {

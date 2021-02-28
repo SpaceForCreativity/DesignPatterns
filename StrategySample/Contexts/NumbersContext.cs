@@ -1,7 +1,7 @@
-﻿using StrategySample.Strategies.Interfaces;
+﻿using StrategyPattern.Strategies.Interfaces;
 using System;
 
-namespace StrategySample.Contexts
+namespace StrategyPattern.Contexts
 {
     public class NumbersContext
     {

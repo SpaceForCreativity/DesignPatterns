@@ -1,12 +1,12 @@
-﻿using StrategySample.Contexts;
-using StrategySample.Repositories.Interfaces;
-using StrategySample.Repositories.RandomIntRepositories;
-using StrategySample.Strategies.NumbersStrategies;
+﻿using StrategyPattern.Contexts;
+using StrategyPattern.Repositories.Interfaces;
+using StrategyPattern.Repositories.RandomIntRepositories;
+using StrategyPattern.Strategies.NumbersStrategies;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace StrategySample
+namespace StrategyPattern
 {
     internal class Program
     {

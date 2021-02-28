@@ -1,4 +1,4 @@
-﻿namespace StrategySample.Strategies.Interfaces
+﻿namespace StrategyPattern.Strategies.Interfaces
 {
     public interface INumbersStrategy
     {

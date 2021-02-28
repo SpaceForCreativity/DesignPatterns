@@ -58,18 +58,13 @@ namespace StrategyPattern
 
             #endregion
 
-            WaitUserKeyDown();
+            Console.ReadKey();
         }
 
 
         private static void ShowResult(int result, string strategyName)
         {
             Console.WriteLine(string.Format(resultFormat, result, strategyName));
-        }
-
-        private static void WaitUserKeyDown()
-        {
-            Console.ReadKey();
         }
 
         private static void ShowNumbers(IEnumerable<int> numbers)

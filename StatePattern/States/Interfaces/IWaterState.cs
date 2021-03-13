@@ -1,4 +1,6 @@
-﻿namespace StatePattern.States.Interfaces
+﻿using StatePattern.Models;
+
+namespace StatePattern.States.Interfaces
 {
     public interface IWaterState
     {

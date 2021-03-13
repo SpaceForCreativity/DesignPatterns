@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{03007120-36C3-4BEB-AF36-D1D4F80ACD55}</ProjectGuid>
+    <ProjectGuid>{B8688A88-9D8B-46CE-8F3E-70819928F795}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Common.AppEntryPoint</RootNamespace>
-    <AssemblyName>Common.AppEntryPoint</AssemblyName>
+    <RootNamespace>Application.Container</RootNamespace>
+    <AssemblyName>Application.Container</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -41,21 +41,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AppConfig.cs" />
+    <Compile Include="Container.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Implementations\Repositories\Repositories.csproj">
-      <Project>{2df45d58-9ffa-4251-b151-0449d390538d}</Project>
-      <Name>Repositories</Name>
+    <ProjectReference Include="..\..\Common\Generators\Common.Generators.csproj">
+      <Project>{2ee323d2-2437-4fcf-8c66-241fe6d0efc0}</Project>
+      <Name>Common.Generators</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Implementations\Validators\Validators.csproj">
-      <Project>{035e94fe-8dbc-4ed9-bbc0-36680a576159}</Project>
-      <Name>Validators</Name>
+    <ProjectReference Include="..\..\Common\Interfaces\Generators\Common.Interfaces.Generators.csproj">
+      <Project>{51aaffc7-40a9-48b5-9836-f23a53341ba3}</Project>
+      <Name>Common.Interfaces.Generators</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Interfaces\Interfaces.csproj">
-      <Project>{2e15b50b-45cc-4f4f-a0ab-e3d08dd5c71f}</Project>
-      <Name>Interfaces</Name>
+    <ProjectReference Include="..\..\Common\Interfaces\Validators\Common.Interfaces.Validators.csproj">
+      <Project>{ccdde49f-9b40-4ede-a88b-85868d84304a}</Project>
+      <Name>Common.Interfaces.Validators</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\Validators\Common.Validators.csproj">
+      <Project>{7c01aecb-65d7-4109-a9c7-82f063cd6e52}</Project>
+      <Name>Common.Validators</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EntryPointManager\Application.EntryPointManager.csproj">
+      <Project>{967b3814-8ba7-4fb6-8e6d-e98b26a47f64}</Project>
+      <Name>Application.EntryPointManager</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StatePattern.Models;
+using System;
 
 namespace StatePattern
 {

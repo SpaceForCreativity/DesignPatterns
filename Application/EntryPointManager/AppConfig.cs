@@ -1,11 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using Common.Interfaces.Repositories;
-using Common.Implementations.Repositories;
-using Common.Implementations.Validators;
+﻿using Common.Generators;
+using Common.Interfaces.Generators;
 using Common.Interfaces.Validators;
+using Common.Validators;
+using System;
+using System.Collections.Generic;
 
-namespace Common.AppEntryPoint
+namespace Application.EntryPointManager
 {
     [Obsolete("Temp realization!!!")]
     public static class AppConfig
@@ -14,7 +14,7 @@ namespace Common.AppEntryPoint
         {
             return new Dictionary<Type, Type>
             {
-                { typeof(IRandomIntRepository), typeof(StandartRandomIntRepository) },
+                { typeof(IRandomIntGenerator), typeof(StandartRandomIntGenerator) },
                 { typeof(IMinMaxValidator), typeof(MinMaxValidator) }
             };
         }

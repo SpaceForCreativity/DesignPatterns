@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8ED44542-E24E-4F1B-94EF-B66DE81DA2E3}</ProjectGuid>
+    <ProjectGuid>{CCDDE49F-9B40-4EDE-A88B-85868D84304A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Common.Container</RootNamespace>
-    <AssemblyName>Common.Container</AssemblyName>
+    <RootNamespace>Common.Interfaces.Validators</RootNamespace>
+    <AssemblyName>Common.Interfaces.Validators</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -41,14 +41,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Container.cs" />
+    <Compile Include="IMinMaxValidator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\AppEntryPoint\AppEntryPoint.csproj">
-      <Project>{03007120-36c3-4beb-af36-d1d4f80acd55}</Project>
-      <Name>AppEntryPoint</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

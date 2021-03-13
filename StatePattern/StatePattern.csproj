@@ -49,7 +49,7 @@
     <Compile Include="States\IceState.cs" />
     <Compile Include="States\Interfaces\IWaterState.cs" />
     <Compile Include="States\NormalState.cs" />
-    <Compile Include="Water.cs" />
+    <Compile Include="Models\Water.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

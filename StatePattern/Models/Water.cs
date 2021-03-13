@@ -2,7 +2,7 @@
 using StatePattern.States.Interfaces;
 using System;
 
-namespace StatePattern
+namespace StatePattern.Models
 {
     public class Water
     {

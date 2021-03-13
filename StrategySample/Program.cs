@@ -1,10 +1,10 @@
-﻿using Common.Interfaces.Repositories;
+﻿using Common.Interfaces.Generators;
 using StrategyPattern.Contexts;
 using StrategyPattern.Strategies.NumbersStrategies;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Common.Container;
+using Application.Container;
 
 namespace StrategyPattern
 {
@@ -20,8 +20,8 @@ namespace StrategyPattern
 
             NumbersContext numbersContext = new NumbersContext();
 
-            var randomIntRepository = Container.Resolve<IRandomIntRepository>();
-            var randomIntValues = randomIntRepository.GetRandomValuesRandomCount(-10, 20, 0, 7).ToArray();
+            var randomIntGenerator = Container.Resolve<IRandomIntGenerator>();
+            var randomIntValues = randomIntGenerator.GetRandomValuesRandomCount(-10, 20, 0, 7).ToArray();
 
             #region Show random values
 

@@ -1,14 +1,20 @@
-﻿using Common.Implementations.Validators;
-using Common.Interfaces.Repositories;
+﻿using Common.Interfaces.Generators;
+using Common.Interfaces.Validators;
 using System;
 using System.Collections.Generic;
 
-namespace Common.Implementations.Repositories
+namespace Common.Generators
 {
-    public class StandartRandomIntRepository : IRandomIntRepository
+    public class StandartRandomIntGenerator : IRandomIntGenerator
     {
         private Random _random = new Random(Guid.NewGuid().GetHashCode());
-        private MinMaxValidator _minMaxValidator = new MinMaxValidator();
+        private IMinMaxValidator _minMaxValidator;
+
+
+        public StandartRandomIntGenerator(IMinMaxValidator minMaxValidator)
+        {
+            _minMaxValidator = minMaxValidator ?? throw new ArgumentNullException(nameof(minMaxValidator));
+        }
 
         public IEnumerable<int> GetRandomValues(int minNumber, int maxNumber, int count)
         {

@@ -4,17 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A778C971-1747-4546-BBF4-54580A84041E}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>StrategyPattern</RootNamespace>
-    <AssemblyName>StrategyPattern</AssemblyName>
+    <ProjectGuid>{2EE323D2-2437-4FCF-8C66-241FE6D0EFC0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Common.Generators</RootNamespace>
+    <AssemblyName>Common.Generators</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,25 +41,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Contexts\NumbersContext.cs" />
-    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Strategies\Interfaces\INumbersStrategy.cs" />
-    <Compile Include="Strategies\NumbersStrategies\AddNumbersStrategy.cs" />
-    <Compile Include="Strategies\NumbersStrategies\FormuleNumbersStrategy.cs" />
-    <Compile Include="Strategies\NumbersStrategies\MultiplyNumbersStrategy.cs" />
+    <Compile Include="StandartRandomIntGenerator.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Application\Container\Application.Container.csproj">
-      <Project>{b8688a88-9d8b-46ce-8f3e-70819928f795}</Project>
-      <Name>Application.Container</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Common\Interfaces\Generators\Common.Interfaces.Generators.csproj">
+    <ProjectReference Include="..\Interfaces\Generators\Common.Interfaces.Generators.csproj">
       <Project>{51aaffc7-40a9-48b5-9836-f23a53341ba3}</Project>
       <Name>Common.Interfaces.Generators</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Interfaces\Validators\Common.Interfaces.Validators.csproj">
+      <Project>{ccdde49f-9b40-4ede-a88b-85868d84304a}</Project>
+      <Name>Common.Interfaces.Validators</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

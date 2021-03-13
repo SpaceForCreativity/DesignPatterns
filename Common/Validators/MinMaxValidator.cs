@@ -1,7 +1,7 @@
 ﻿using Common.Interfaces.Validators;
 using System;
 
-namespace Common.Implementations.Validators
+namespace Common.Validators
 {
     public class MinMaxValidator : IMinMaxValidator
     {

@@ -11,8 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StatePattern", "StatePatter
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{0CFD43BD-A7CF-4499-8EDB-DCD70BD47E9C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application.EntryPointManager", "Application\EntryPointManager\Application.EntryPointManager.csproj", "{967B3814-8BA7-4FB6-8E6D-E98B26A47F64}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application.Container", "Application\Container\Application.Container.csproj", "{B8688A88-9D8B-46CE-8F3E-70819928F795}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Interfaces", "Interfaces", "{B8DE8BD2-D207-4AF7-8B30-79E5FA1797DF}"
@@ -25,7 +23,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Validators", "Common
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common.Interfaces.Validators", "Common\Interfaces\Validators\Common.Interfaces.Validators.csproj", "{CCDDE49F-9B40-4EDE-A88B-85868D84304A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompositePattern", "CompositePattern\CompositePattern.csproj", "{EDEF3776-0128-4CCD-A198-CC44916D6583}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CompositePattern", "CompositePattern\CompositePattern.csproj", "{EDEF3776-0128-4CCD-A198-CC44916D6583}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,10 +39,6 @@ Global
 		{FFF7457E-34D5-4D80-B1EA-EDD2A6BEB734}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FFF7457E-34D5-4D80-B1EA-EDD2A6BEB734}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FFF7457E-34D5-4D80-B1EA-EDD2A6BEB734}.Release|Any CPU.Build.0 = Release|Any CPU
-		{967B3814-8BA7-4FB6-8E6D-E98B26A47F64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{967B3814-8BA7-4FB6-8E6D-E98B26A47F64}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{967B3814-8BA7-4FB6-8E6D-E98B26A47F64}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{967B3814-8BA7-4FB6-8E6D-E98B26A47F64}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B8688A88-9D8B-46CE-8F3E-70819928F795}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B8688A88-9D8B-46CE-8F3E-70819928F795}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B8688A88-9D8B-46CE-8F3E-70819928F795}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -74,7 +68,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{967B3814-8BA7-4FB6-8E6D-E98B26A47F64} = {0CFD43BD-A7CF-4499-8EDB-DCD70BD47E9C}
 		{B8688A88-9D8B-46CE-8F3E-70819928F795} = {0CFD43BD-A7CF-4499-8EDB-DCD70BD47E9C}
 		{B8DE8BD2-D207-4AF7-8B30-79E5FA1797DF} = {A438C90F-C753-4A94-9309-AAC29711EAA8}
 		{51AAFFC7-40A9-48B5-9836-F23A53341BA3} = {B8DE8BD2-D207-4AF7-8B30-79E5FA1797DF}

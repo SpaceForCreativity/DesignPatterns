@@ -1,10 +1,10 @@
-﻿using Common.Interfaces.Generators;
+﻿using Application.Container;
+using Common.Interfaces.Generators;
 using StrategyPattern.Contexts;
 using StrategyPattern.Strategies.NumbersStrategies;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Application.Container;
 
 namespace StrategyPattern
 {
@@ -20,7 +20,7 @@ namespace StrategyPattern
 
             NumbersContext numbersContext = new NumbersContext();
 
-            var randomIntGenerator = Container.Resolve<IRandomIntGenerator>();
+            var randomIntGenerator = DependencyContainer.Resolve<IRandomIntGenerator>();
             var randomIntValues = randomIntGenerator.GetRandomValuesRandomCount(-10, 20, 0, 7).ToArray();
 
             #region Show random values
